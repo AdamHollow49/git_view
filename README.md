@@ -11,3 +11,4 @@ With the chance to go back and modify this and improve it I would make the follo
 - Unit testing.
 - Add animation for loading whilst awaiting data and rendering of information.
 - Embed searchbox div inside form component for cleaner App.js
+- Implement state management
