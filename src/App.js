@@ -38,13 +38,13 @@ class App extends React.Component {
 
       return (
         <div className="App">
-        //top of page
+        
           <PageSearch />
-        //search box
+       
             <div className="search-box" style={{ textAlign: 'center' }}>
               <Form onSubmit={this.addNewSearch} />
             </div>
-            //tabs component
+            
           <Tabs>
             <div label="Repos">
               
