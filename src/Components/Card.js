@@ -5,6 +5,7 @@ import React from 'react';
 export class Card extends React.Component {
     render() {
         const repo = this.props;
+        //check if org data
         if (repo.login) {
             return (
             
@@ -16,6 +17,7 @@ export class Card extends React.Component {
                     </div>
                 </div>
             );
+            //if not
         }else{}
         return (
             
