@@ -12,7 +12,7 @@ import './App.css';
 var hasSearched = false;
 
 class App extends React.Component {
-  //code to 
+  //code to add new search data to state
   addNewSearch = (searchData, orgData) => {
     hasSearched = true;
     this.setState(prevState => ({
@@ -22,11 +22,14 @@ class App extends React.Component {
 
   
   render() {
+    //if search has been performed
     if (hasSearched) {
+      //if orgs array is empty
       if (this.state.profiles[0].length === 0) {
         console.log("No Orgs")
         this.state.profiles[0] = [{ login: 'No Organisations Found', description: "This person doesn't appear to be part of any organisations, awkward...", html_url: "", }]
       }
+      //if repos array is empty
       if (this.state.profiles[1].length === 0) {
         console.log("No Repos")
         this.state.profiles[0] = [{ login: 'No Repositories Found', description: "This person doesn't appear have any repos..., awkward...", html_url: "", }]
@@ -35,22 +38,27 @@ class App extends React.Component {
 
       return (
         <div className="App">
+        //top of page
           <PageSearch />
+        //search box
             <div className="search-box" style={{ textAlign: 'center' }}>
               <Form onSubmit={this.addNewSearch} />
             </div>
-            
+            //tabs component
           <Tabs>
             <div label="Repos">
+              //repos array sent to cardlist
               <CardList profiles={this.state.profiles[1]} />
             </div>
             <div label="Orgs">
+              //orgs array sent to cardlist
               <CardList profiles={this.state.profiles[0]} />
             </div>
           </Tabs>
         </div>
       );
     } else {
+      //if no search
       return (
         <div className="App">
           <PageTop />
