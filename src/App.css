@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+}
+.topbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 25vh;
+  
+}
+.App-header {                                                                                                               
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  min-height: 100vh;
+}
+
+.outbox {
+
+  width: 50%;
+  margin-bottom: 2vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+  max-width: 100%;
+  padding: 20px;
+}
+
+:placeholder-shown {
+  text-align: center;
+}
+
+.cardbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-list {
+  padding-left: 0;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem, 1rem;
+}
+
+.tab-list-active {
+  border-width: 1px 1px 0 1px;
+  background-color: black;
+}
+
+li{
+  margin: 5px;
+}
